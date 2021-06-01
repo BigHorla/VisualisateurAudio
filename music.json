@@ -1,37 +1,32 @@
 {
-    "music":
-    [
-        {
-            "song": "son/bombom.mp3",
-            "color": "tomato",
-            "style": "Electro",
-            "name" : "Groove me",
-            "img": "img/bombom.jpg"
-        
-        },
-        {
-            "song": "son/child.mp3",
-            "color": "lightblue",
-            "style": "Ambiance",
-            "name" : "Playground",
-            "img": "img/playground.jpg"
-            
-        },
-        {
-            "song": "son/Open.mp3",
-            "color": "violet",
-            "style": "Symphonique",
-            "name" : "Battles of darkness",
-            "img": "img/Battles_of_darkness.jpg"
-            
-        },
-        {
-            "song": "son/piano.mp3",
-            "color": "cornflowerblue",
-            "style": "Classique",
-            "name" : "Piano Time",
-            "img": "img/piano.jpg"
-            
-        }
-    ]
+  "music": [
+    {
+      "song": "son/bombom.mp3",
+      "color": "tomato",
+      "style": "Electro",
+      "name": "Groove me",
+      "img": "img/bombom.jpg"
+    },
+    {
+      "song": "son/child.mp3",
+      "color": "lightblue",
+      "style": "Ambiance",
+      "name": "Playground",
+      "img": "img/playground.jpg"
+    },
+    {
+      "song": "son/Open.mp3",
+      "color": "violet",
+      "style": "Symphonique",
+      "name": "Battles of darkness",
+      "img": "img/Battles_of_darkness.jpg"
+    },
+    {
+      "song": "son/piano.mp3",
+      "color": "cornflowerblue",
+      "style": "Classique",
+      "name": "Piano Time",
+      "img": "img/piano.jpg"
+    }
+  ]
 }
