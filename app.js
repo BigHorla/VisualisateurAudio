@@ -56,8 +56,6 @@ audioPlayer.addEventListener("play", () => {
   const retourneBarres = () => {
     requestAnimationFrame(retourneBarres);
 
-    x = x_ = WIDTH / 2;
-
     analyseur.getByteFrequencyData(tableauFrequences);
 
     ctx.fillStyle = "#232323";
@@ -69,23 +67,41 @@ audioPlayer.addEventListener("play", () => {
     document.querySelector(
       ".titre"
     ).textContent = `"${musiques[musique].name}"`;
-
-    for (let i = 0; i < frequencesAudio; i++) {
-      hauteurBarre = tableauFrequences[i] + 5;
-
-      let r = 250 - i / 2;
-      let g = i / 2;
-      let b = i;
-
-      ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
-      ctx.fillRect(x, HEIGHT, largeurBarre, -hauteurBarre);
-      ctx.fillRect(x_, HEIGHT, largeurBarre, -hauteurBarre);
-
-      x += largeurBarre + 1;
-      x_ -= largeurBarre + 1;
-
-      /* audioPlayer.style.transform = `translate(-50%,-50%) scale(${1+(1/i)})`; */
+    
+    if(window.innerWidth > 800){
+        x = x_ = WIDTH / 2;
+        for (let i = 0; i < frequencesAudio; i++) {
+          hauteurBarre = tableauFrequences[i] + 5;
+    
+          let r = 250 - i / 2;
+          let g = i / 2;
+          let b = i;
+    
+          ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+          ctx.fillRect(x, HEIGHT, largeurBarre, -hauteurBarre);
+          ctx.fillRect(x_, HEIGHT, largeurBarre, -hauteurBarre);
+    
+          x += largeurBarre + 1;
+          x_ -= largeurBarre + 1;
+        }
+    }else{
+        x = x_ = WIDTH;
+        for (let i = 0; i < frequencesAudio; i++) {
+            hauteurBarre = tableauFrequences[i] + 5;
+      
+            let r = 250 - i / 2;
+            let g = i / 2;
+            let b = i;
+      
+            ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+            ctx.fillRect(x, HEIGHT, largeurBarre, -hauteurBarre);
+            ctx.fillRect(x_, HEIGHT, largeurBarre, -hauteurBarre);
+      
+            x += largeurBarre + 1;
+            x_ -= largeurBarre + 1;
+          }
     }
+
   };
   retourneBarres();
 });
@@ -116,6 +132,3 @@ precedent.addEventListener("click", () => {
   }
   selectionMusique(musiques[musique]);
 });
-
-audioPlayer.play();
-audioPlayer.pause();

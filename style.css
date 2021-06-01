@@ -7,6 +7,7 @@ body {
   height: 100vh;
   background: #232323;
   font-family: "Ubuntu", sans-serif;
+  overflow: hidden;
 }
 .titre {
   margin: 0;
@@ -48,20 +49,49 @@ body {
   cursor: pointer;
   transition-duration: 0.3s;
 }
+
 .ctrl:hover {
   transition-duration: 0.3s;
   background: #585858;
 }
 .suivant {
   right: 20%;
-  top: 15%;
+  top: 17%;
   clip-path: polygon(20% 0, 100% 50%, 20% 100%, 0 100%, 80% 50%, 0 0);
 }
 .precedent {
   left: 20%;
-  top: 15%;
+  top: 17%;
   clip-path: polygon(100% 0%, 20% 50%, 100% 100%, 80% 100%, 0% 50%, 80% 0);
 }
+@media screen and (min-width:600px) and (max-width: 800px) {
+    .ctrl{
+        height: 140px;
+        width: 80px;
+    }
+    .suivant{
+        right: 5%;
+        top: 23%;
+    }
+    .precedent {
+        left: 5%;
+        top: 23%;
+      }
+ }
+ @media screen and (max-width: 600px) {
+    .ctrl{
+        height: 140px;
+        width: 80px;
+    }
+    .suivant{
+        right: 5%;
+        top: 53%;
+    }
+    .precedent {
+        left: 5%;
+        top: 53%;
+    }
+ }
 .pochette .vinyleStyle {
   width: 120px;
   height: 120px;
